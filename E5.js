@@ -1,25 +1,20 @@
-function encontrarEdadesExtremas(familia) {
-    // Ordenamos la lista de familiares por edad
-    let familiaOrdenada = familia.sort((a, b) => a.edad - b.edad);
+function edad(familia){
+    let familiaord = familia.sort((a,b)=> a.edad - b.edad)
 
-    // El familiar con menor edad será el primero
-    let menor = familiaOrdenada[0];
+    let menor = familiaord[0]
 
-    // El familiar con mayor edad será el último
-    let mayor = familiaOrdenada[familiaOrdenada.length - 1];
+    let mayor = familiaord[familiaord.length - 1]
 
-    return {menor, mayor};
+    return {menor, mayor}
 }
 
-// Ejemplo de uso
-let familia = [
-    {nombre: 'Juan', edad: 34},
-    {nombre: 'Ana', edad: 28},
-    {nombre: 'Carlos', edad: 42},
-    {nombre: 'María', edad: 36}
-];
+let familia =[
+    {nombre: `Juan`, edad: 34},
+    {nombre: `Marina`, edad: 28},
+    {nombre: `Itzel`, edad: 42},
+    {nombre: `MArio`, edad: 38},
+]
 
-let {menor, mayor} = encontrarEdadesExtremas(familia);
-
-console.log(`El miembro más joven de la familia es ${menor.nombre} con ${menor.edad} años.`);
-console.log(`El miembro más viejo de la familia es ${mayor.nombre} con ${mayor.edad} años.`);
+let {menor, mayor}= edad(familia)
+console.log(`El mas joven es ${menor.nombre} con ${menor.edad} años`);
+console.log(`El mas mañor es ${mayor.nombre} con ${mayor.edad}`);
